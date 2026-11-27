@@ -1,9 +1,12 @@
 $("#knop").click(function() {
     var getal = $("#invoer").val();
-    if (getal % 2 == 0) {
-        $("#uitvoer").text("EVEN");
-    }
-    else {
-        $("#uitvoer").text("ONEVEN");
+    if($.isNumeric(getal)) {
+        if (getal % 2 == 0) {
+            $("#uitvoer").text("EVEN");
+        } else {
+            $("#uitvoer").text("ONEVEN");
+        }
+    } else {
+        $("#uitvoer").text("Geef een geheel getal in!");
     }
 });
